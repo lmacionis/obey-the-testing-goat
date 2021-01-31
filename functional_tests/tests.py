@@ -114,4 +114,4 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied they both go back to sleep
 
-# Chapter 7, Iterating towards the new design
+# Chapter 7, Green? Refactor
