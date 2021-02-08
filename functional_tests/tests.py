@@ -114,4 +114,4 @@ class NewVisitorTest(LiveServerTestCase):
 
         # Satisfied they both go back to sleep
 
-# Chapter 7, Biting the bullet: Adjusting Our Models
+# Chapter 7, The Functional Tests Detect Another Regression
