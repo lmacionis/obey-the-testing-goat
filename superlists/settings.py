@@ -24,9 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'w!4152f=2kgu5%l=fhrzg!lk%_5+48k3kc9n2+(y&rm$br+ij9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
+if 'DJANGO_DEBUG_FALSE' in os.environ:
+    DEBUG = False
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+    ALLOWED_HOSTS = [os.environ['SITENAME']]
+else:
+    DEBUG = True
+    SECRET_KEY = 'insecure-kee-for-dev'
+    ALLOWED_HOSTS = []
 
 
 # Application definition
